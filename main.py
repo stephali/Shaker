@@ -15,6 +15,11 @@ pygame.display.set_caption('Shaker')        # game title
 
 gameExit = False
 
+# create rect object with desired position, width & length
+rectWidth = 200
+rectHeight = 200
+rect = pygame.Rect((DISPLAY_WIDTH / 2) - rectWidth / 2, (DISPLAY_HEIGHT / 2) - rectHeight / 2, rectWidth, rectHeight)
+
 # for loop for events & display
 while not gameExit:
     for event in pygame.event.get():
@@ -22,10 +27,7 @@ while not gameExit:
             gameExit = True
 
     gameDisplay.fill(white)     # display's color
-
-    rect = pygame.Rect(0, 0, 200, 200)      # create rect object with desired width and length
-    rect.center = (DISPLAY_WIDTH / 2, DISPLAY_HEIGHT / 2)        # set the center at x&y
-    pygame.draw.rect(gameDisplay, black, rect, 5)      # (platform, color, where, outline width)
+    pygame.draw.rect(gameDisplay, black, rect, 5)      # draw rectangle with (platform, color, where, outline width)
 
     pygame.display.update()
 
