@@ -27,9 +27,13 @@ while not gameExit:
             gameExit = True
 
     gameDisplay.fill(white)     # display's color
-    pygame.draw.rect(gameDisplay, black, rect, 5)      # draw rectangle with (platform, color, where, outline width)
+    pygame.draw.rect(gameDisplay, black, rect, 5)      # draw rectangle with (platform, color, where, outline width
+
+
+    if (rect.collidepoint(pygame.mouse.get_pos())):
+       pygame.draw.rect(gameDisplay, red, rect, 5)  # draw rectangle with (platform, color, where, outline width
 
     pygame.display.update()
-
 pygame.quit()
 quit()
+
