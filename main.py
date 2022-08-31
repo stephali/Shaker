@@ -42,8 +42,8 @@ while not gameExit:
             # move the mouse while holding left button and drag rect to desired location
             if event.type == pygame.MOUSEMOTION:
                 rect.center = event.pos     # this works but cursor moves to rect's center
-                #---test 1--- x, y = pygame.mouse.get_pos()
-                #---test 1--- rect.center = (((x - rect.centerx) + x), ((y - rect.centery) + y))
+                # ---test 1--- x, y = pygame.mouse.get_pos()
+                # ---test 1--- rect.center = (((x - rect.centerx) + x), ((y - rect.centery) + y))
                 
     pygame.display.update()
 pygame.quit()
