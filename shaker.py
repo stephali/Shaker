@@ -76,5 +76,3 @@ while not gameExit:
     pygame.display.update()
 pygame.quit()
 quit()
-
-
